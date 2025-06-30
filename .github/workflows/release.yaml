@@ -1,0 +1,84 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: 'Type de bump (patch, minor, major)'
+        required: false
+        default: ''
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build plugin
+        run: npm run build
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Check next version
+        id: version_check
+        run: |
+          NEXT_VERSION=$(npx --yes standard-version --dry-run | grep "tagging release" | sed 's/.*v//')
+          echo "Next version: $NEXT_VERSION"
+          echo "next_version=$NEXT_VERSION" >> $GITHUB_OUTPUT
+
+          if git rev-parse "v$NEXT_VERSION" >/dev/null 2>&1; then
+            echo "⚠️ Tag v$NEXT_VERSION already exists. Skipping."
+            echo "should_release=false" >> $GITHUB_OUTPUT
+          else
+            echo "should_release=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run standard-version and push
+        if: steps.version_check.outputs.should_release == 'true'
+        run: |
+          npx standard-version --release-as "${{ github.event.inputs.bump || 'auto' }}"
+          git push origin main --follow-tags
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get version from package.json
+        if: steps.version_check.outputs.should_release == 'true'
+        id: tag
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          echo "tag=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: GitHub Release
+        if: steps.version_check.outputs.should_release == 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.tag.outputs.tag }}
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to npm
+        if: steps.version_check.outputs.should_release == 'true'
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
