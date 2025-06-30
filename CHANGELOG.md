@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/steeven-th/grapesjs-object-fit/compare/v0.1.4...v0.1.5) (2025-06-30)
+
+
+### Bug Fixes
+
+* update workflow ([22b01f3](https://github.com/steeven-th/grapesjs-object-fit/commit/22b01f3d8b9df534614ab9056961cfb744ac0057))
+
 ### [0.1.4](https://github.com/steeven-th/grapesjs-object-fit/compare/v0.1.2...v0.1.4) (2025-06-30)
 
 
