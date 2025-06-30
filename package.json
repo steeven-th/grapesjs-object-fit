@@ -1,11 +1,11 @@
 {
-  "name": "@steeven-th/grapesjs-style-object-fit",
+  "name": "@steeven-th/grapesjs-object-fit",
   "version": "0.1.2",
-  "description": "Grapesjs Style Object Fit",
+  "description": "Grapesjs Object Fit",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/steeven-th/grapesjs-style-object-fit.git"
+    "url": "https://github.com/steeven-th/grapesjs-object-fit.git"
   },
   "scripts": {
     "start": "grapesjs-cli serve",
