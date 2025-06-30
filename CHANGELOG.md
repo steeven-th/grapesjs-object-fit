@@ -1,3 +1,9 @@
+## [0.1.7](https://github.com/steeven-th/grapesjs-object-fit/compare/v0.1.6...v0.1.7) (2025-06-30)
+
+### Bug Fixes
+
+* add semantic-release/git ([7968849](https://github.com/steeven-th/grapesjs-object-fit/commit/7968849eb39804524960d08865976f2a4777283d))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
