@@ -6,7 +6,7 @@
 ```html
 <link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet">
 <script src="https://unpkg.com/grapesjs"></script>
-<script src="https://unpkg.com/grapesjs-style-object-fit"></script>
+<script src="https://unpkg.com/grapesjs-object-fit"></script>
 
 <div id="gjs"></div>
 ```
@@ -18,7 +18,7 @@ const editor = grapesjs.init({
   height: '100%',
   fromElement: true,
   storageManager: false,
-  plugins: ['grapesjs-style-object-fit'],
+  plugins: ['grapesjs-object-fit'],
 });
 ```
 
@@ -33,7 +33,7 @@ body, html {
 
 ## Summary
 
-* Plugin name: `grapesjs-style-object-fit`
+* Plugin name: `grapesjs-object-fit`
 * Adds `object-fit` style property to selected components (images by default)
 * Dynamically shows/hides the property based on component type
 * Fully customizable (sector, values, i18n, etc.)
@@ -56,11 +56,11 @@ body, html {
 ## Download
 
 * CDN
-    * `https://unpkg.com/@steeven-th/grapesjs-style-object-fit`
+    * `https://unpkg.com/grapesjs-object-fit`
 * NPM
-    * `npm i @steeven-th/grapesjs-style-object-fit`
+    * `npm i grapesjs-object-fit`
 * GIT
-    * `git clone https://github.com/steeven-th/grapesjs-style-object-fit.git`
+    * `git clone https://github.com/steeven-th/grapesjs-object-fit.git`
 
 
 
@@ -70,7 +70,7 @@ Directly in the browser
 ```html
 <link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet"/>
 <script src="https://unpkg.com/grapesjs"></script>
-<script src="path/to/grapesjs-style-object-fit.min.js"></script>
+<script src="path/to/grapesjs-object-fit.min.js"></script>
 
 <div id="gjs"></div>
 
@@ -78,9 +78,9 @@ Directly in the browser
   var editor = grapesjs.init({
       container: '#gjs',
       // ...
-      plugins: ['grapesjs-style-object-fit'],
+      plugins: ['grapesjs-object-fit'],
       pluginsOpts: {
-        'grapesjs-style-object-fit': { /* options */ }
+        'grapesjs-object-fit': { /* options */ }
       }
   });
 </script>
@@ -89,19 +89,19 @@ Directly in the browser
 Modern javascript
 ```js
 import grapesjs from 'grapesjs';
-import plugin from 'grapesjs-style-object-fit';
+import objectFitPlugin from 'grapesjs-object-fit';
 import 'grapesjs/dist/css/grapes.min.css';
 
 const editor = grapesjs.init({
   container : '#gjs',
   // ...
-  plugins: [plugin],
+  plugins: [objectFitPlugin],
   pluginsOpts: {
-    [plugin]: { /* options */ }
+    [objectFitPlugin]: { /* options */ }
   }
   // or
   plugins: [
-    editor => plugin(editor, { /* options */ }),
+    editor => objectFitPlugin(editor, { /* options */ }),
   ],
 });
 ```
@@ -110,7 +110,7 @@ const editor = grapesjs.init({
 
 ```js
 import grapesjs from 'grapesjs';
-import objectFitPlugin from 'grapesjs-style-object-fit';
+import objectFitPlugin from 'grapesjs-object-fit';
 import 'grapesjs/dist/css/grapes.min.css';
 
 const editor = grapesjs.init({
@@ -151,8 +151,8 @@ const editor = grapesjs.init({
 Clone the repository
 
 ```sh
-$ git clone https://github.com/steeven-th/grapesjs-style-object-fit.git
-$ cd grapesjs-style-object-fit
+$ git clone https://github.com/steeven-th/grapesjs-object-fit.git
+$ cd grapesjs-object-fit
 ```
 
 Install dependencies
