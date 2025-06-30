@@ -1,3 +1,9 @@
+## [0.2.0](https://github.com/steeven-th/grapesjs-object-fit/compare/v0.1.10...v0.2.0) (2025-06-30)
+
+### Features
+
+* remove @semantic-release/github ([4b2b11c](https://github.com/steeven-th/grapesjs-object-fit/commit/4b2b11cff143bcbc7803cd1d84094dd52fd5c88e))
+
 ## [0.1.10](https://github.com/steeven-th/grapesjs-object-fit/compare/v0.1.9...v0.1.10) (2025-06-30)
 
 ### Bug Fixes
