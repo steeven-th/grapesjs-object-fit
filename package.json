@@ -1,6 +1,6 @@
 {
   "name": "grapesjs-object-fit",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Grapesjs Object Fit",
   "main": "dist/index.js",
   "repository": {
