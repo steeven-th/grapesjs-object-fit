@@ -1,3 +1,9 @@
+## [0.1.10](https://github.com/steeven-th/grapesjs-object-fit/compare/v0.1.9...v0.1.10) (2025-06-30)
+
+### Bug Fixes
+
+* update release instructions ([d87b1ba](https://github.com/steeven-th/grapesjs-object-fit/commit/d87b1ba43071468dd7374d2e1e42cc8aadb54a56))
+
 ## [0.1.9](https://github.com/steeven-th/grapesjs-object-fit/compare/v0.1.8...v0.1.9) (2025-06-30)
 
 ### Bug Fixes
