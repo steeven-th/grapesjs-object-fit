@@ -1,11 +1,12 @@
 import en from './locale/en';
 import fr from './locale/fr';
+import de from './locale/de';
 
 export default (editor, opts = {}) => {
     const config = {
         sector: 'dimension',
         property: 'object-fit',
-        labelPrefix: 'grapesjs-style-object-fit',
+        labelPrefix: 'grapesjs-object-fit',
         default: 'cover',
         i18n: {},
         values: [
@@ -62,6 +63,7 @@ export default (editor, opts = {}) => {
     editor.I18n && editor.I18n.addMessages({
         en,
         fr,
+        de,
         ...config.i18n,
     });
 };

@@ -1,5 +1,5 @@
 export default {
-    'grapesjs-style-object-fit': {
+    'grapesjs-object-fit': {
         'fill': 'Fill',
         'contain': 'Contain',
         'cover': 'Cover',
