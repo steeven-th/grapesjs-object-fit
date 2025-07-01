@@ -1,3 +1,9 @@
+## [0.3.2](https://github.com/steeven-th/grapesjs-object-fit/compare/v0.3.1...v0.3.2) (2025-07-01)
+
+### Bug Fixes
+
+* add DE translation & update default translation key ([d438399](https://github.com/steeven-th/grapesjs-object-fit/commit/d43839917091701a4266104e8404de4fa11de57b))
+
 ## [0.3.1](https://github.com/steeven-th/grapesjs-object-fit/compare/v0.3.0...v0.3.1) (2025-06-30)
 
 ### Bug Fixes
