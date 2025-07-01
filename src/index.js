@@ -7,7 +7,7 @@ export default (editor, opts = {}) => {
         sector: 'dimension',
         property: 'object-fit',
         labelPrefix: 'grapesjs-object-fit',
-        default: 'cover',
+        default: 'none',
         i18n: {},
         values: [
             { value: 'fill', nameKey: 'fill' },
