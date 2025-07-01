@@ -1,3 +1,9 @@
+## [0.3.3](https://github.com/steeven-th/grapesjs-object-fit/compare/v0.3.2...v0.3.3) (2025-07-01)
+
+### Bug Fixes
+
+* changed default value from COVER to NONE ([aea15a0](https://github.com/steeven-th/grapesjs-object-fit/commit/aea15a0da7cd570b6e431e0fdf98b9d87dc5e4bc))
+
 ## [0.3.2](https://github.com/steeven-th/grapesjs-object-fit/compare/v0.3.1...v0.3.2) (2025-07-01)
 
 ### Bug Fixes
